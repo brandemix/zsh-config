@@ -8,6 +8,7 @@
 # GNU ls aliases
 #
 # For macOS where GNU ls is installed via homebrew as `gls`
+# NOT USING GNU gls
 case $SYSTEM in
   Darwin)
     alias ls='ls -G'

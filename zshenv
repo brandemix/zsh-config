@@ -7,6 +7,7 @@ skip_global_compinit=1
 
 # http://disq.us/p/f55b78
 setopt noglobalrcs
+unsetopt AUTO_NAME_DIRS
 
 export SYSTEM=$(uname -s)
 
