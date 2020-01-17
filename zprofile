@@ -35,4 +35,5 @@ else
     eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
 fi
 
-export REPOS_PATH=$HOME/workspace/dexcom
+source ~/.profile
+
