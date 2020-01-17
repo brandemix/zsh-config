@@ -6,7 +6,6 @@
 # https://unix.stackexchange.com/a/329719/27109
 #
 #zmodload zsh/zprof
-
 export SCRIPTS=${HOME}/scripts
 
 export ZSHCONFIG=${ZDOTDIR:-$HOME}/.zsh-config
@@ -46,6 +45,29 @@ esac
 # https://github.com/zdharma/zplugin/wiki/Direnv-explanation
 #eval "$(direnv hook zsh)"
 
+# Setup nvm
+#
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+
+# Setup rvm
+#
+source $HOME/.rvm/scripts/rvm
 
 # Private script here
 [ -f ~/.private.zsh ] && source ~/.private.zsh
+
+# Go SETUP
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOROOT/bin:$GOPATH:$PATH
+
+# GCLOUD Setup
+export PATH=$HOME/google-cloud-sdk/bin:$PATH
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.base16-manager/chriskempson/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+unsetopt AUTO_NAME_DIRS

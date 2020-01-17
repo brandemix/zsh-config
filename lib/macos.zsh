@@ -10,7 +10,7 @@
 # For macOS where GNU ls is installed via homebrew as `gls`
 case $SYSTEM in
   Darwin)
-    alias ls='/usr/local/bin/gls --color=auto'
+    alias ls='ls -G'
   ;;
   Linux)
     alias ls='ls --color=auto'
